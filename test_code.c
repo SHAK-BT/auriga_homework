@@ -18,8 +18,10 @@ int count_list_items(const list_t *head) {
     /* Inserts a new list item after the one specified as the argument.
 	 */
 void insert_next_to_list(list_t *item, int data) {
-	(item->next = malloc(sizeof(list_t)))->next = item->next;
-	item->next->data = data;
+	list_t* tmp_ptr = item->next;
+    item->next = malloc(sizeof(list_t));
+    item->next->data = data;
+    item->next->next = tmp_ptr;
 }
 
     /* Removes an item following the one specificed as the argument.
