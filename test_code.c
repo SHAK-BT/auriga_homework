@@ -38,7 +38,7 @@ void remove_next_from_list(list_t *item) {
 	 */
 char *item_data(const list_t *list)
 {
-	char buf[12];
+	static char buf[12];
 
 	sprintf(buf, "%d", list->data);
 	return buf;
