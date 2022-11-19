@@ -28,8 +28,9 @@ void insert_next_to_list(list_t *item, int data) {
 	 */
 void remove_next_from_list(list_t *item) {
 	 if (item->next) {
-		free(item->next);
-        item->next = item->next->next;
+        list_t* tmp_ptr = item->next->next;
+        free(item->next);
+        item->next = tmp_ptr;
      }
 }
 
