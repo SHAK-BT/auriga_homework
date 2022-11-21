@@ -1,0 +1,12 @@
+Problems in the code with the list of items - reflected in the 'issues' section of this repository. Their fixes are in the commits concerning the test_code.c file. Implementation of "ls -l" in ls_util.c file.
+
+Answers to text questions:
+
+
+2. The use of a statically linked application is necessary when we want to include all the necessary code directly in the binary program file. This can be used to transfer this program from system to system without worrying about the presence of the necessary libraries in them, and at the same time we do not strive to ensure that the size of the binary file is as small as possible, and the amount of memory occupied by the loaded program is also not limited.
+
+4. The debugger adds some additional instructions to the debugged code that trigger debugging events. In the case of Unix, this is sending a SIGTRAP signal, which is caught by the debugger.
+
+5. No, since when a breakpoint is set, the kernel will make a copy of the memory page, and reassign the application to the memory area where this copy is located. The application will only work with this area, and the area where the shared library for other applications is located will not be affected.
+
+6. A user-space process may be in a stopped state, waiting for an I/O operation to complete. An operation can complete while another process is running. A hardware interrupt occurs and takes time. The current process will be suspended for this time. This means any process can affect the performance of other processes.
